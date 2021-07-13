@@ -8,25 +8,29 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   appBar: {
     display: "flex",
-    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    width: "90vmax",
-    height: "10vmin",
+    width: "75vmax",
+    height: "calc(5rem + 4.8vmin)",
     margin: "30px 100px",
     border: "2px solid black",
     borderRadius: 15,
-    boxShadow: "4px 4px 3px rgba(0,0,0,0.75)",
 
     [theme.breakpoints.down("xs")]: {
+      width: "75%",
+    },
+
+    [theme.breakpoints.down("sm")]: {
       width: "90%",
     },
   },
   Typography: {
-    fontSize: "42px",
-    fontWeight: "600",
+    fontFamily: "'Tourney', cursive",
+    fontSize: "calc(1rem + 6.9vmin)",
+    fontWeight: "500",
     color: "floralwhite",
-    textShadow: "1px 1px 1px rgba(0,0,0,0.8)",
+    textShadow: "3px 3px 2px rgba(0,0,0,0.69)",
+    padding: "1.5rem 0px",
   },
   image: {
     marginLeft: "15px",
@@ -46,7 +50,7 @@ const App = () => {
     <div className={classes.wrapper}>
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Typography variant="h2" align="center" className={classes.Typography}>
-          Video Chat App
+          Vid-Pop
         </Typography>
       </AppBar>
 
@@ -55,15 +59,6 @@ const App = () => {
       <Options>
         <Notifications />
       </Options>
-
-      {/* <h1
-        style={{
-          color: "floralwhite",
-          textShadow: "1px 1px 0px rgba(0,0,0,0.8)",
-        }}
-      >
-        Video Chat App
-      </h1> */}
     </div>
   );
 };

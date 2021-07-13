@@ -5,17 +5,13 @@ import { SocketContext } from "../SocketContext";
 
 const useStyles = makeStyles((theme) => ({
   video: {
-    // width: "38vmax",
-    // height: "30vmin",
     width: "600px",
     [theme.breakpoints.down("xs")]: {
       width: "300px",
     },
   },
   bigVideo: {
-    // width: "48vmax",
-    // height: "40vmin",
-    width: "600px",
+    width: "700px",
   },
   gridContainer: {
     justifyContent: "center",
@@ -27,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px",
     border: "2px solid black",
     margin: "10px",
+    boxShadow: "4px 4px 6px rgba(0,0,0,0.6)",
+  },
+  name: {
+    fontFamily: "'Fira Code', monospace;",
   },
 }));
 
@@ -42,23 +42,12 @@ const VideoPlayer = () => {
     call,
   } = useContext(SocketContext);
 
-  // const handleClick = () => {
-  //   console.log("name: ", name);
-  //   console.log("callAccepted: ", callAccepted);
-  //   console.log("myVideo: ", myVideo);
-  //   console.log("userVideo: ", userVideo);
-  //   console.log("callEnded: ", callEnded);
-  //   console.log("stream: ", stream);
-  //   console.log("call: ", call);
-  // };
-
   return (
     <Grid container className={classes.gridContainer}>
-      {/* OUR OWN VIDEO */}
       {stream && (
         <Paper className={classes.paper}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h5" gutterBottom>
+            <Typography className={classes.name} variant="h4" gutterBottom>
               {name || "no username"}
             </Typography>
             <video
@@ -67,19 +56,18 @@ const VideoPlayer = () => {
               muted
               ref={myVideo}
               // autoPlay
-              // className={classes.video}
-              className={!stream ? classes.video : classes.bigVideo}
+              className={classes.video}
+              // className={!stream ? classes.video : classes.bigVideo}
             >
               Sorry, your browser doesn't support embedded videos :(
             </video>
           </Grid>
         </Paper>
       )}
-      {/* USER'S VIDEO */}
       {callAccepted && !callEnded && (
         <Paper className={classes.paper}>
           <Grid item xs={12} md={6}>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h4" gutterBottom className={classes.name}>
               {call.name || "no username"}
             </Typography>
             <video
@@ -94,13 +82,6 @@ const VideoPlayer = () => {
           </Grid>
         </Paper>
       )}
-
-      {/* <button
-        onClick={handleClick}
-        style={{ border: "1px solid tomato", padding: "30px 50px" }}
-      >
-        Clicky
-      </button> */}
     </Grid>
   );
 };

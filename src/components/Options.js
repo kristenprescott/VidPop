@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   container: {
+    boxShadow: "4px 4px 6px rgba(0,0,0,0.6)",
+
     width: "600px",
     margin: "35px 0",
     padding: 0,
@@ -33,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   margin: {
     marginTop: 20,
+    fontFamily: "'Fira Code', monospace",
   },
   padding: {
     padding: 20,
@@ -40,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: "10px 20px",
     border: "2px solid black",
+  },
+  text: {
+    fontFamily: "'Fira Code', monospace",
   },
 }));
 
@@ -62,7 +68,7 @@ const Options = ({ children }) => {
         <form className={classes.root} noValidate autoComplete="off ">
           <Grid container className={classes.gridContainer}>
             <Grid item xs={12} md={6} className={classes.padding}>
-              <Typography gutterBottom variant="h6">
+              <Typography gutterBottom variant="h6" className={classes.text}>
                 Account Info
               </Typography>
               <TextField
@@ -73,6 +79,7 @@ const Options = ({ children }) => {
               />
               <CopyToClipboard text={me} className={classes.margin}>
                 <Button
+                  className={classes.text}
                   variant="contained"
                   color="primary"
                   fullWidth
@@ -83,7 +90,7 @@ const Options = ({ children }) => {
               </CopyToClipboard>
             </Grid>
             <Grid item xs={12} md={6} className={classes.padding}>
-              <Typography gutterBottom variant="h6">
+              <Typography gutterBottom variant="h6" className={classes.text}>
                 Make a call
               </Typography>
               <TextField

@@ -1,6 +1,6 @@
 {
-  "short_name": "VideoChat",
-  "name": "Socket.io VideoChat App",
+  "short_name": "VidPop",
+  "name": "Socket.io Video Chat App",
   "icons": [
     {
       "src": "favicon.ico",
