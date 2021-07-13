@@ -4,6 +4,8 @@
 
 A chat app made using React.js and Socket.io.
 
+[DEMO](https://vid-pop.netlify.app/)
+
 ## Dependencies
 
 ---
