@@ -1,3 +1,22 @@
+<div align="center">
+
+# Vid-Pop
+
+A chat app made using React.js and Socket.io.
+
+## Dependencies
+
+---
+
+<div align="left">
+
+- @material-ui
+- react-copy-to-clipboard
+- simple-peer
+- socket.io-client
+
+<details><summary>Bootstrapped with Create React App</summary>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +87,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+</details>
+
+</div>
+
+</div>
