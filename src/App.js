@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     width: "90vmax",
-    height: "13vmin",
+    height: "10vmin",
     margin: "30px 100px",
     border: "2px solid black",
     borderRadius: 15,

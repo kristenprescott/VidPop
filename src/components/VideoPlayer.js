@@ -42,15 +42,15 @@ const VideoPlayer = () => {
     call,
   } = useContext(SocketContext);
 
-  const handleClick = () => {
-    console.log("name: ", name);
-    console.log("callAccepted: ", callAccepted);
-    console.log("myVideo: ", myVideo);
-    console.log("userVideo: ", userVideo);
-    console.log("callEnded: ", callEnded);
-    console.log("stream: ", stream);
-    console.log("call: ", call);
-  };
+  // const handleClick = () => {
+  //   console.log("name: ", name);
+  //   console.log("callAccepted: ", callAccepted);
+  //   console.log("myVideo: ", myVideo);
+  //   console.log("userVideo: ", userVideo);
+  //   console.log("callEnded: ", callEnded);
+  //   console.log("stream: ", stream);
+  //   console.log("call: ", call);
+  // };
 
   return (
     <Grid container className={classes.gridContainer}>

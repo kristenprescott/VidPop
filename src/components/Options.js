@@ -84,22 +84,24 @@ const Options = ({ children }) => {
             </Grid>
             <Grid item xs={12} md={6} className={classes.padding}>
               <Typography gutterBottom variant="h6">
-                Make a Call
+                Make a call
               </Typography>
               <TextField
                 label="ID to Call"
                 value={idToCall}
-                onChange={(e) => setIdToCall(e.target.value)}
+                onChange={(e) => {
+                  setIdToCall(e.target.value);
+                }}
                 fullWidth
               />
               {callAccepted && !callEnded ? (
                 <Button
                   variant="contained"
                   color="secondary"
+                  startIcon={<PhoneDisabled fontSize="large" />}
                   fullWidth
                   onClick={leaveCall}
                   className={classes.margin}
-                  startIcon={<PhoneDisabled fontSize="large" />}
                 >
                   Hang Up
                 </Button>
@@ -107,12 +109,12 @@ const Options = ({ children }) => {
                 <Button
                   variant="contained"
                   color="primary"
+                  startIcon={<Phone fontSize="large" />}
                   fullWidth
                   onClick={() => {
                     callUser(idToCall);
                   }}
                   className={classes.margin}
-                  startIcon={<Phone fontSize="large" />}
                 >
                   Call
                 </Button>
