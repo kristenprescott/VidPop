@@ -85,7 +85,8 @@ const VideoPlayer = () => {
             <video
               playsInline
               ref={userVideo}
-              autoPlay
+              controls
+              // autoPlay
               className={classes.video}
             >
               Sorry, your browser doesn't support embedded videos :(
