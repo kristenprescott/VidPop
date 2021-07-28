@@ -8,8 +8,6 @@ A videophone app I made using React and Socket.io.
 
 ## Dependencies
 
----
-
 <div align="left">
 
 - @material-ui
