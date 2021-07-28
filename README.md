@@ -5,7 +5,11 @@
 A videophone app I made using React and Socket.io.
 
 [DEMO](https://vid-pop.netlify.app/)
+  
+  <img align="center" width="1032" alt="Screen Shot 2021-07-28 at 8 27 59 AM" src="https://user-images.githubusercontent.com/55470100/127322492-4c945808-b72c-4174-b480-e9428079d1c2.png">
 
+<!-- 
+  
 ## Dependencies
 
 <div align="left">
@@ -89,7 +93,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 </details>
-
+ -->
 </div>
 
 </div>
