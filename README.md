@@ -1,6 +1,6 @@
 <div align="center">
 
-# Vid-Pop
+# VidPop
 
 A videophone app I made using React and Socket.io.
 
