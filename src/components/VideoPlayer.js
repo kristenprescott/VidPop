@@ -3,6 +3,8 @@ import { Grid, Typography, Paper, makeStyles } from "@material-ui/core";
 // import { makeStyles } from "@material-ui/core/styles";
 import { SocketContext } from "../SocketContext";
 
+import vidpopcorn from "../assets/images/vidpopcorn.png";
+
 const useStyles = makeStyles((theme) => ({
   video: {
     width: "600px",
@@ -48,14 +50,17 @@ const VideoPlayer = () => {
         <Paper className={classes.paper}>
           <Grid item xs={12} md={6}>
             <Typography className={classes.name} variant="h4" gutterBottom>
-              {name || "no username"}
+              {name || ""}
             </Typography>
             <video
               controls
               playsInline
-              muted
+              muted={true}
               ref={myVideo}
-              // autoPlay
+              autoPlay={true}
+              // TODO: change poster (below) to user icon
+              // poster="https://i.picsum.photos/id/598/536/354.jpg?hmac=82Os7u6EtTg423GKsDw_kHY2fbSzzi9Y_RnCxQ8wmzY"
+              poster={vidpopcorn}
               className={classes.video}
               // className={!stream ? classes.video : classes.bigVideo}
             >
@@ -68,13 +73,16 @@ const VideoPlayer = () => {
         <Paper className={classes.paper}>
           <Grid item xs={12} md={6}>
             <Typography variant="h4" gutterBottom className={classes.name}>
-              {call.name || "no username"}
+              {call.name || ""}
             </Typography>
             <video
               playsInline
+              muted={true}
               ref={userVideo}
               controls
-              // autoPlay
+              autoPlay={true}
+              // TODO: change poster (below) to user icon
+              poster="https://i.picsum.photos/id/598/536/354.jpg?hmac=82Os7u6EtTg423GKsDw_kHY2fbSzzi9Y_RnCxQ8wmzY"
               className={classes.video}
             >
               Sorry, your browser doesn't support embedded videos :(
