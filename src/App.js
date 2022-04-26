@@ -5,6 +5,28 @@ import Options from "./components/Options";
 import Notifications from "./components/Notifications";
 import { makeStyles } from "@material-ui/core/styles";
 
+const App = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.wrapper}>
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography variant="h2" align="center" className={classes.Typography}>
+          Vid-Pop
+        </Typography>
+      </AppBar>
+
+      <VideoPlayer />
+
+      <Options>
+        <Notifications />
+      </Options>
+    </div>
+  );
+};
+
+export default App;
+
 const useStyles = makeStyles((theme) => ({
   appBar: {
     display: "flex",
@@ -42,25 +64,3 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
 }));
-
-const App = () => {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.wrapper}>
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography variant="h2" align="center" className={classes.Typography}>
-          Vid-Pop
-        </Typography>
-      </AppBar>
-
-      <VideoPlayer />
-
-      <Options>
-        <Notifications />
-      </Options>
-    </div>
-  );
-};
-
-export default App;

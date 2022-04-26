@@ -5,33 +5,6 @@ import { SocketContext } from "../SocketContext";
 
 import vidpopcorn from "../assets/images/vidpopcorn.png";
 
-const useStyles = makeStyles((theme) => ({
-  video: {
-    width: "600px",
-    [theme.breakpoints.down("xs")]: {
-      width: "300px",
-    },
-  },
-  bigVideo: {
-    width: "700px",
-  },
-  gridContainer: {
-    justifyContent: "center",
-    [theme.breakpoints.down("xs")]: {
-      flexDirection: "column",
-    },
-  },
-  paper: {
-    padding: "10px",
-    border: "2px solid black",
-    margin: "10px",
-    boxShadow: "4px 4px 6px rgba(0,0,0,0.6)",
-  },
-  name: {
-    fontFamily: "'Fira Code', monospace;",
-  },
-}));
-
 const VideoPlayer = () => {
   const classes = useStyles();
   const {
@@ -95,3 +68,30 @@ const VideoPlayer = () => {
 };
 
 export default VideoPlayer;
+
+const useStyles = makeStyles((theme) => ({
+  video: {
+    width: "600px",
+    [theme.breakpoints.down("xs")]: {
+      width: "300px",
+    },
+  },
+  bigVideo: {
+    width: "700px",
+  },
+  gridContainer: {
+    justifyContent: "center",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
+  },
+  paper: {
+    padding: "10px",
+    border: "2px solid black",
+    margin: "10px",
+    boxShadow: "4px 4px 6px rgba(0,0,0,0.6)",
+  },
+  name: {
+    fontFamily: "'Fira Code', monospace;",
+  },
+}));
