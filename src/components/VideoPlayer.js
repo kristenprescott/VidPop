@@ -7,23 +7,15 @@ import vidpopcorn from "../assets/images/vidpopcorn.png";
 
 const VideoPlayer = () => {
   const classes = useStyles();
-  const {
-    name,
-    callAccepted,
-    myVideo,
-    userVideo,
-    callEnded,
-    stream,
-    call,
-  } = useContext(SocketContext);
+  const appContext = useContext(SocketContext);
 
   return (
     <Grid container className={classes.gridContainer}>
-      {stream && (
+      {appContext.stream && (
         <Paper className={classes.paper}>
           <Grid item xs={12} md={6}>
             <Typography className={classes.name} variant="h4" gutterBottom>
-              {name || ""}
+              {appContext.name || ""}
             </Typography>
             <video
               controls
